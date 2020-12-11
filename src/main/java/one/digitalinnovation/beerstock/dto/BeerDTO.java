@@ -39,4 +39,8 @@ public class BeerDTO {
     @Enumerated(EnumType.STRING)
     @NotNull
     private BeerType type;
+
+    public String getName() {
+        return null;
+    }
 }

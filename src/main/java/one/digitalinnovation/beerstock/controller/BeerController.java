@@ -29,6 +29,10 @@ public class BeerController implements BeerControllerDocs {
 
     private final BeerService beerService;
 
+    public BeerController() {
+        beerService = new BeerService();
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public BeerDTO createBeer(@RequestBody @Valid BeerDTO beerDTO) throws BeerAlreadyRegisteredException {
@@ -53,6 +57,6 @@ public class BeerController implements BeerControllerDocs {
 
     @PatchMapping("/{id}/increment")
     public BeerDTO increment(@PathVariable Long id, @RequestBody @Valid QuantityDTO quantityDTO) throws BeerNotFoundException, BeerStockExceededException {
-        return beerService.increment(id, quantityDTO.getQuantity());
+        return beerService.increment(id, (Integer) quantityDTO.getQuantity());
     }
 }

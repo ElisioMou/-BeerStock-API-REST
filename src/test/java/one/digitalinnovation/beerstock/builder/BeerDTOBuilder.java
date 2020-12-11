@@ -1,9 +1,6 @@
 package one.digitalinnovation.beerstock.builder;
 
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import ch.qos.logback.classic.spi.LoggingEventVO;
 import lombok.Builder;
 import one.digitalinnovation.beerstock.dto.BeerDTO;
 import one.digitalinnovation.beerstock.enums.BeerType;
@@ -28,6 +25,10 @@ public class BeerDTOBuilder {
 
     @Builder.Default
     private BeerType type = BeerType.LAGER;
+
+    public static LoggingEventVO builder() {
+        return null;
+    }
 
     public BeerDTO toBeerDTO() {
         return new BeerDTO(id,

@@ -17,4 +17,9 @@ public class QuantityDTO {
     @NotNull
     @Max(100)
     private Integer quantity;
+
+    public Object getQuantity() {
+        return null;
+    }
 }
+
