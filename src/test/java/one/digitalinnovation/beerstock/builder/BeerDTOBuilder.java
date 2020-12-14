@@ -1,6 +1,5 @@
 package one.digitalinnovation.beerstock.builder;
 
-import ch.qos.logback.classic.spi.LoggingEventVO;
 import lombok.Builder;
 import one.digitalinnovation.beerstock.dto.BeerDTO;
 import one.digitalinnovation.beerstock.enums.BeerType;
@@ -25,10 +24,6 @@ public class BeerDTOBuilder {
 
     @Builder.Default
     private BeerType type = BeerType.LAGER;
-
-    public static LoggingEventVO builder() {
-        return null;
-    }
 
     public BeerDTO toBeerDTO() {
         return new BeerDTO(id,

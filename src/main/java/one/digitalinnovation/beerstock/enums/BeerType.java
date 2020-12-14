@@ -16,8 +16,4 @@ public enum BeerType {
     STOUT("Stout");
 
     private final String description;
-
-    BeerType(String description) {
-        this.description = description;
-    }
 }

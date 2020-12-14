@@ -18,8 +18,12 @@ public class QuantityDTO {
     @Max(100)
     private Integer quantity;
 
-    public Object getQuantity() {
-        return null;
-    }
-}
 
+	public int getQuantity() {
+		return 0;
+	}
+
+	public static Object builder() {
+		return null;
+	}
+}

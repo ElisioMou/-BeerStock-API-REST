@@ -40,10 +40,4 @@ public class Beer {
     private BeerType type;
 
 
-    public void getQuantity() {
-    }
-
-    public String getName() {
-        return null;
-    }
 }
